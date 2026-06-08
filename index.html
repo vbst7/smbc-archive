@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMBC Transcript Index Search</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen font-sans">
+
+    <header class="bg-gray-800 border-b border-gray-700 sticky top-0 z-40 shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <h1 class="text-xl font-bold text-yellow-400">SMBC Transcript Index</h1>
+            
+            <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+                <input type="text" id="searchInput" placeholder="Type keywords (e.g., 'manpons', 'uranium')..." 
+                       class="bg-gray-700 text-white placeholder-gray-400 px-4 py-2 rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400 w-full sm:w-96">
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        <div id="statusMessage" class="text-center text-gray-400 text-lg my-12">Loading searchable index file...</div>
+        
+        <div id="resultsMeta" class="text-sm text-gray-400 mb-4 hidden"></div>
+
+        <div id="resultsContainer" class="space-y-4 hidden"></div>
+    </main>
+
+    <script>
+        let archiveIndex = [];
+
+        const searchInput = document.getElementById('searchInput');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultsMeta = document.getElementById('resultsMeta');
+        const statusMessage = document.getElementById('statusMessage');
+
+        async function init() {
+            try {
+                const response = await fetch('smbc_archive/search_index.json');
+                if (!response.ok) throw new Error("Index data could not be reached.");
+                archiveIndex = await response.json();
+                
+                statusMessage.classList.add('hidden');
+                resultsContainer.classList.remove('hidden');
+                resultsMeta.classList.remove('hidden');
+                
+                // Show all records by default
+                executeSearch();
+                
+                searchInput.addEventListener('input', executeSearch);
+            } catch (err) {
+                statusMessage.innerText = "Error: search_index.json not found. Run compile_index.py first.";
+                console.error(err);
+            }
+        }
+
+        // Extracts matching sentences and applies text highlighting
+        function generateSnippet(lines, query) {
+            if (!query) {
+                if (lines.length === 0) return "<span class='text-gray-600'>No transcript text available.</span>";
+                const preview = lines[0];
+                return preview.length > 120 ? preview.substring(0, 120) + "..." : preview;
+            }
+
+            let matchingSnippets = [];
+            
+            // Loop through each sentence/line inside the comic archive data
+            for (let line of lines) {
+                const matchIndex = line.toLowerCase().indexOf(query);
+                if (matchIndex !== -1) {
+                    const start = Math.max(0, matchIndex - 50);
+                    const end = Math.min(line.length, matchIndex + query.length + 50);
+                    const snippet = line.substring(start, end);
+
+                    // Escape basic HTML characters to avoid script injections
+                    let safeSnippet = snippet.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    
+                    // Highlight the match using a regex boundary query
+                    const regex = new RegExp(`(${query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})`, 'gi');
+                    const highlighted = safeSnippet.replace(regex, "<mark class='bg-yellow-400/30 text-yellow-200 rounded px-0.5 font-medium'>$1</mark>");
+                    
+                    matchingSnippets.push(`${start > 0 ? '...' : ''}${highlighted}${end < line.length ? '...' : ''}`);
+                }
+            }
+
+            // Return all matching context sentences joined together, or a fallback notice
+            return matchingSnippets.length > 0 
+                ? matchingSnippets.join("<br class='my-1'>") 
+                : "<span class='text-gray-600'>Keyword found in structural metadata matching fields.</span>";
+        }
+
+        function executeSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            resultsContainer.innerHTML = '';
+
+            // Filter entries
+            const matches = archiveIndex.filter(comic => {
+                if (!query) return true;
+                // Match tracking across title or lines array
+                if (comic.title.toLowerCase().includes(query)) return true;
+                return comic.lines.some(line => line.toLowerCase().includes(query));
+            });
+
+            // Update Counter Meta UI text
+            resultsMeta.innerText = query 
+                ? `Found ${matches.length} matches for "${searchInput.value}"`
+                : `Displaying all ${matches.length} archived entries`;
+
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = '<div class="text-center text-gray-500 py-12">No matching transcript records found.</div>';
+                return;
+            }
+
+            // Render text rows sequentially
+            matches.forEach(comic => {
+                const snippetHTML = generateSnippet(comic.lines, query);
+                
+                const itemRow = document.createElement('div');
+                itemRow.className = "bg-gray-800 border border-gray-700 rounded-xl p-5 hover:border-gray-600 transition duration-100 flex flex-col sm:flex-row sm:items-start justify-between gap-4";
+                
+                itemRow.innerHTML = `
+                    <div class="space-y-2 max-w-3xl">
+                        <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                            <span class="text-xs font-mono text-yellow-500 font-medium">${comic.date}</span>
+                            <h2 class="text-lg font-bold text-gray-100">${comic.title}</h2>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-relaxed font-normal tracking-wide bg-gray-850/50 p-3 rounded-lg border border-gray-750 font-mono">
+                            ${snippetHTML}
+                        </div>
+                    </div>
+                    <div class="pt-1 shrink-0 text-right">
+                        <a href="https://www.smbc-comics.com/comic/${comic.id}" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-1 bg-gray-700 hover:bg-yellow-500 hover:text-gray-900 text-yellow-400 font-medium text-xs px-3 py-1.5 rounded-md transition-colors border border-gray-600 hover:border-transparent">
+                            Open Comic 
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                `;
+                
+                resultsContainer.appendChild(itemRow);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
