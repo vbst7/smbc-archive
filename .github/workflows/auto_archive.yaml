@@ -1,0 +1,51 @@
+name: Automated SMBC Index Sync
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-search-blob:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install Google Chrome (Required for Lens headless API)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget curl unzip
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+
+    - name: Install Pipeline Packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4 atproto chrome-lens-py protobuf
+
+    - name: Run Live Integration Scraper
+      run: |
+        python bsky_scraper.py
+
+    - name: Commit Updated Search Blob
+      run: |
+        git config --global user.name "SMBC-Archive-Bot"
+        git config --global user.email "archive-bot@github.com"
+        git add smbc_archive/search_index.json
+        
+        if ! git diff --cached --quiet; then
+          git commit -m "Automated Sync: Updated search master index payload"
+          git push
+        else
+          echo "No new changes detected."
+        fi
