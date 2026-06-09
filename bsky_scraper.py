@@ -190,7 +190,7 @@ async def run_bluesky_pipeline():
 
             # Build structural sentences list exactly for the dynamic highlighting frontend
             combined_lines = []
-            for item in main_ocr_lines + votey_ocr_lines + [web_data["hover_text"], bsky_alt]:
+            for item in ["".join(main_ocr_lines), "".join(votey_ocr_lines), web_data["hover_text"], bsky_alt]:
                 if item and isinstance(item, str):
                     cleaned = " ".join(item.split())
                     if cleaned and cleaned not in combined_lines:
