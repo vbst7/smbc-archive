@@ -1,5 +1,17 @@
 [
     {
+        "id": "mission",
+        "title": "Mission",
+        "date": "2026-06-27",
+        "source_url": "https://www.smbc-comics.com/comic/mission",
+        "lines": [
+            "WHAT DO YOU MEAN I NEED TO INSTALL ITUNESTO MAKE THE FILTRATION SYSTEM WORK.?!I ALREADY INSTALLED ITUNES. I AM LOOKINGAT IT, DAMMIT. FUCK IT! LET THEM DIE!ROGER.FLIGHT, THIS ISMISSION CONTROL,WE ARE LETTINGYOU DIE.There should be remake of Apollo 13 where theyhave to make Apple products run on Windows.",
+            "FAILURE IS NOT OPTIONAL/",
+            "Created after watching my CTO brother struggle to make an iPhone transmit live video to a Windows desktop for over an hour.",
+            "1-panel SMBC comic update. The panel shows several men in a control room. A man in a vest and tie with a military haircut is shouting the following orders : \"What do you MEAN I need to install itunes to make the filtration system work?! I already installed itunes. I am LOOKING AT IT, DAMMIT. FUCK IT! LET THEM DIE!\" One of his subordinates answers \"roger. Flight, this is mission control, we are letting you die.\" The caption below the comic reads: \"There should be remake of Apollo 13 where they have to make Apple products run on Windows.\""
+        ]
+    },
+    {
         "id": "milgram",
         "title": "Milgram",
         "date": "2026-06-26",
