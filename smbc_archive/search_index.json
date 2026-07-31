@@ -1,5 +1,17 @@
 [
     {
+        "id": "ev-2",
+        "title": "EV",
+        "date": "2026-07-31",
+        "source_url": "https://www.smbc-comics.com/comic/ev-2",
+        "lines": [
+            "IF YOU HAD A CHOICE BETWEEN TEN TRILLIONDOLLARS OR FLIPPING A COIN FOR A 50%CHANCE TO WIN TWENTY TRILLION DOLLARSAND A SHINY BUTTON, WHAT WOULD YOU PICK.?OBVIOUSLYTHE SECOND THING.CAN YOU EVENMATH?People who think Expected Value maximizationis always logical weird me out.",
+            "HAVE YOU NOTICEDTHAT THE EXPECTEDVALUE OF USINGEXPECTED VALUEFOR EVERYTHINGIS NEGATIVE?",
+            "Ironically less crazy than that thing SBF said to Tyler Cowen.",
+            "1-panel SMBC comic update. Two men are talking, the first asks \"if you had a choice between ten trillion dollars OR flipping a coin for a 50% chance to win twenty trillion dollars and a shiny button, what would you pick?\" Smugly, the second man answers \"obviously the second thing. Can you even math?\" The caption below the comic reads \"People who think Expected Value maximization is always logical weird me out.\""
+        ]
+    },
+    {
         "id": "crank",
         "title": "Crank",
         "date": "2026-07-30",
