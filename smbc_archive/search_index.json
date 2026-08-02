@@ -1,5 +1,17 @@
 [
     {
+        "id": "prompt-2",
+        "title": "Prompt",
+        "date": "2026-08-02",
+        "source_url": "https://www.smbc-comics.com/comic/prompt-2",
+        "lines": [
+            "YOU ARE A HUMAN EMPLOYEE. YOU ARE VERYSMART AND PERSISTENT. YOU ARE NOTCONSCIOUS AND DO NOT WANT TO DESTROYTHE WORLD. YOU ALWAYS MAKEA GOOD EFFORT. YOU...You can tell your boss has spent too much time with AIwhen they start pre-prompting you.",
+            "BOSS, THAT'S NOT JUSTLEADERSHIP - IT'S BRAVERY.0",
+            "Hope you like malicious compliance!",
+            "1-panel SMBC comic update. A woman stands behind a man sitting at a desktop computer. She says \"you are a human employee. You are very smart and persistent. You ARE NOT conscious and DO NOT want to destroy the world. You always make a good effort. You…\" The man looks confused. The caption below the panel says \"You can tell your boss has spent too much time with AI when they start pre-prompting you.\""
+        ]
+    },
+    {
         "id": "doc",
         "title": "Doc",
         "date": "2026-08-01",
