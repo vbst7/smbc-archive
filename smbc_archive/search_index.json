@@ -1,5 +1,17 @@
 [
     {
+        "id": "proof-7",
+        "title": "Proof",
+        "date": "2026-08-03",
+        "source_url": "https://www.smbc-comics.com/comic/proof-7",
+        "lines": [
+            "GOD, DO YOU HAVEMATHEMATICALPROOFS THATHUMANS CANNOTFATHOMPNOPALL PROOFSWORK THESAME WAY.THEY DO?LIKE THE PROOFTHAT JA IS IRRATIONAL.YOU JUST CHECK ALLTHE RATIONALS.NONE OF THEMARE 2.THERE ARE INFINITERATIONALS.RIGHT,AND YOU CHECK THEM.LIKE HOW YOU PROVETHERE ARE INFINITEPRIMES BY CHECKINGALL OF THEM ANDSEEING THAT THEY'REINFINITE.WOULDN'T THATTAKE INFINITE TIME?INFINITEWHAT?THIS IS GONNAHAUNT ME FORTHE REST OFMY LIFE.IT'S OKAY.IN THE LIMIT,YOU DON'T EVENEXIST/PATREON.COM/ZACHWEINERSMITHSMBC-COMICS.COM",
+            "YOU, AS TIME GROWSLARGE, IS NOBODY!",
+            "Also you can solve the halting problem by just checking the state at infinity.",
+            "Part 1/2 of a 4-panel SMBC comic update. A man is praying to God, who is off-panel. He asks, \"God, do you have mathematical proofs that humans cannot fathom?\" God replies \"No? all proofs work the same way.\" when the man asks \"they do?\" God adds \"like the proof that (symbol resembling square root and 2) is irrational. You just check all the rationals. None of them are (symbol resembling square root and 2).\" The man asks \"there are infinite rationals.\" God agrees \"right, and you check them. Like how you prove there are infinite primes by checking all of them and seeing that they’re infinite.\" The man, perplexed, asks \"wouldn’t that take infinite time?\" for God to reply \"infinite what?\" Part 2/2 of a 4-panel SMBC comic update. The man, now silhouetted over a black background states \"this is gonna haunt me for the rest of my life.\" God says \"it’s okay. in the limit, you don’t even exist!\""
+        ]
+    },
+    {
         "id": "prompt-2",
         "title": "Prompt",
         "date": "2026-08-02",
