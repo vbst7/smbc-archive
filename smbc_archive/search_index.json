@@ -1,5 +1,17 @@
 [
     {
+        "id": "case",
+        "title": "Case",
+        "date": "2026-08-14",
+        "source_url": "https://www.smbc-comics.com/comic/case",
+        "lines": [
+            "HUMAN! I HAVE SOLVED ALLYOUR MOST DIFFICULTMATHEMATICS WITH PROOFSMORE BEAUTIFUL THAN YOUCOULD EVER IMAGINE!BEHOLD!WHAT?!NONE OF THESE ARECONSTRUCTIVE OR INDUCTIVEOR... THIS IS LIKE... 80 MILLIONPAGES OF CASE ANALYSIS.NO HUMAN MIND COULD READAND FOLLOW ALL OF THIS.SO BEAUTIFUL. PURECONCEPT-FREE TRUTH.SO, SO BEAUTIFUL.PATREON.COM/ZACHWEINERSMITHSMBC-COMICS.COM",
+            "OR RATHER, THE TWOPOSSIBLE CASES WEREBEAUTIFUL AND NOTBEAUTIFUL AND WE HAVERULED OUT NOTBEAUTIFUL.",
+            "The machines see constructive proofs as lazy solutions hacked together.",
+            "4-panel SMBC comic update. An advanced robot calls to a human saying \"human! I have solved all your most difficult mathematics with proofs more beautiful than you could ever imagine!\" When the human asks \"what,\" he presents a large stack of papers exclaiming \"behold!\" The human examines the papers in the stack, saying \"none of these are constructive or inductive or… this is like… 80 million pages of case analysis.\" The robot gushes \"so beautiful. Pure concept-free truth.\" The human states \"no human mind could read and follow all of this,\" leading the robot to insist \"so, SO beautiful.\""
+        ]
+    },
+    {
         "id": "scale",
         "title": "Scale",
         "date": "2026-08-13",
