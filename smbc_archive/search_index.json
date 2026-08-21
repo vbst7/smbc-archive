@@ -1,5 +1,17 @@
 [
     {
+        "id": "classic",
+        "title": "Classic",
+        "date": "2026-08-21",
+        "source_url": "https://www.smbc-comics.com/comic/classic",
+        "lines": [
+            "INTERNET PEOPLE DEBATING LITERARY CLASSICS:I DON'T READ THISSTUFF EVER ANDIT IS BORING ANDOVER-RATEDOH YEAH, WELL IDON'T READ THISSTUFF EVER ANDIT IS THE HIGHESTACHIEVEMENT OFOUR CIVILIZATIONPATREON.COM/ZACHWEINERSMITHSMBC-COMICS.COM",
+            "PROPOSED RULE:ANYONE CLAIMINGTO DEFEND THE\"WESTERN CANON\"IN AN INTERVIEWSHOULD BE OBLIGATEDTO IMMEDIATELY COUGH UP10 MEMORIZED LINES OFCHAUCER, SHAKESPEARE,POPE, WHITMAN,DICKINSON, OR KIPLING.",
+            "Just kidding, nobody talks about this stuff.",
+            "2-panel SMBC comic update. Two simplified drawings of people are arguing at each other, each in their own panel. The narration box over the comic reads \"internet people debating literary classics:\" In the first panel, a person states with passion \"I don't read this stuff ever and it is boring and over-rated.\" In the second panel, a second person answers with matching passion \"oh yeah, well I don't read this stuff ever and it is the highest achievement of our civilization.\""
+        ]
+    },
+    {
         "id": "service-2",
         "title": "Service",
         "date": "2026-08-20",
