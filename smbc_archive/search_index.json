@@ -1,5 +1,17 @@
 [
     {
+        "id": "secret",
+        "title": "Secret",
+        "date": "2026-08-30",
+        "source_url": "https://www.smbc-comics.com/comic/secret",
+        "lines": [
+            "I HAVE ENOUGH MONEY FORA REVOLVING BOOKSHELFTO HIDE SECRETS, BUT ALLOF MY SECRETS ARE JUSTSAD THINGS THAT HAVEHAPPENED TO ME.SheilalovedyouBeing an adult is Hell.",
+            "ALSO NOW I CAN EATWHATEVER I CHOOSE,EXCEPT THAT I CAN'T.2",
+            "The good news is you can put beer back there.",
+            "1-panel SMBC comic update. Two men are hanging out in a library room. The owner of the room pulls on a book to reveal a secret passage. He says \"I have enough money for a revolving bookshelf to hide secrets, but all of my secrets are just sad things that have happened to me.\" On the hidden wall, there is the photo of a woman with the words \"Sheila loved you\" scribbled above it. The caption below the comic reads \"Being an adult is Hell.\""
+        ]
+    },
+    {
         "id": "echo",
         "title": "Echo",
         "date": "2026-08-29",
