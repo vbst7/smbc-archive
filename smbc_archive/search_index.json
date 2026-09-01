@@ -1,5 +1,17 @@
 [
     {
+        "id": "philosophy-6",
+        "title": "Philosophy",
+        "date": "2026-09-01",
+        "source_url": "https://www.smbc-comics.com/comic/philosophy-6",
+        "lines": [
+            "KNOW YOUR BRANCHES OF PHILOSOPHYSTUFF THAT MATTERSCONTINENTALCAREFULREASONINGCONFUSINGBULLSHITANALYTICSTUFF THAT DOESN'T MATTER",
+            "SMBC",
+            "Anyone who doesn't find this funny is in the lower right.",
+            "SMBC 1-panel comic update. A four-quadrant chart is shown with the title \"know your branches of philosophy.\" On the left of the horizontal x axis, there is \"careful reasoning.\" on the right of the x axis, \"confusing bullshit.\" At the top of the y vertical axis there is \"stuff that matters,\" and at the bottom of the y axis can be found \"stuff that doesn't matter.\" A dot is located at the far bottom left, identified as \"analytic.\" Another dot is located at the far top right, identified as \"continental.\""
+        ]
+    },
+    {
         "id": "royal",
         "title": "Royal",
         "date": "2026-08-31",
