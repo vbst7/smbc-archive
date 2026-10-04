@@ -1,5 +1,17 @@
 [
     {
+        "id": "a-2",
+        "title": "A",
+        "date": "2026-10-04",
+        "source_url": "https://www.smbc-comics.com/comic/a-2",
+        "lines": [
+            "A BUGGYFRIENDA PIDERA SNICKYSNEK1A VERYGOΟΒΟΥLife goal: Name a species in every genusthat starts with A.",
+            "FACT THEREFACT: THERE IS ANARSES GENUS, NONEOF WHICH IS NAMEDHOLE. TEN POINTSTO WHOEVER DOESIT FIRST.",
+            "Bonus points if you can figure out what the canine is.",
+            "4-panel SMBC comic update. Each panel shows a different animal with a cute name - A Buggyfriend, A Pider, A SnickySnek and A Verygoodboy. The caption below the comic reads \"life goal: name a species in every genus that starts with A.\""
+        ]
+    },
+    {
         "id": "specify",
         "title": "Specify",
         "date": "2026-10-03",
