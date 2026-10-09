@@ -1,5 +1,17 @@
 [
     {
+        "id": "bet-2",
+        "title": "Bet",
+        "date": "2026-10-09",
+        "source_url": "https://www.smbc-comics.com/comic/bet-2",
+        "lines": [
+            "WE HAVE NO CARDS LEFTTO PLAY IT IS LOSS ORSTALEMATE. WE LAUNCH THENUCLEAR ARSENAL. NOW.ONCE OUR STRIKE IS INBOUND,OUR FOES WILL RETURN FIRE.BILLIONS, UNSUSPECTING, REDUCED TO SHADOWS ON ACONCRETE WALL. IN THE YEARS THAT FOLLOW, CROPS WILLWITHER UNDER A BITUMINOUS SKY. AND THOSE CHILDREN WHOSURVIVE INFANCY WILL FOREVER BEAR THE MARK OFTHE ATOM IN THEIR BLOOD AND TISSUES.WHATEVER WORLDEMERGES, CIVILIZATIONSHALL NOT.MR. PRESIDENT, I ASK YOU TOHESITATE. JUST FOR A MOMENT.YOU HAVEFIVEMINUTES.PREDICTION MARKETTHERMONUCLEARWORLD WARBEFORE ENDOF YEAR100%10YES34NO974BUYPATREON.COM/ZACHWEINERSMITHSMBC-COMICS.COM",
+            "WAIT! CALL OFF THEARMAGEDDON!",
+            "The president is actually doing the same thing in the third to last panel.",
+            "Part 1/2 of a 7-panel SMBC comic update. A generic version of an American president leans grimly over his desk, stating \"we have no cards left to play. It is loss or stalemate. We launch the nuclear arsenal. Now.\" He then talks about the effects of the fallout for 2 panels: \"once our strike is inbound, our foes will return fire. Billions, unsuspecting, reduced to shadows on a concrete wall. In the years that follow, crops will wither under a bituminous sky. And those children who survive infancy will forever bear the mark of the atom in their blood and tissues.\" Part 2/2 of a 7-panel SMBC comic update. The president concludes \"Whatever world emerges, civilization shall not.\" An employee standing behind him asks \"mr. president, I ask you to hesitate. Just for a moment.\" The president grants him 5 minutes, during which the employee bets on a prediction market app on his phone that there will be thermonuclear wold war before the end of the year.\""
+        ]
+    },
+    {
         "id": "prompt-3",
         "title": "Prompt",
         "date": "2026-10-08",
