@@ -1,5 +1,17 @@
 [
     {
+        "id": "funeral",
+        "title": "Funeral",
+        "date": "2026-10-20",
+        "source_url": "https://www.smbc-comics.com/comic/funeral",
+        "lines": [
+            "FOR YEAR IN RANGE(88):BOOKS(); GARDENING(); FAMILY()When I die, I want a Kolmogorov Eulogy.",
+            "DOUCHE.",
+            "Actually for me you can get it down to an eyeroll and a tired sigh.",
+            "1-panel SMBC comic update. A woman with grey hair stands at a podium in front of a small gathering. She says \"for year in range(88): books(); gardening(); family()\" The caption below the comic reads \"When I die, I want a Kolmogorov Eulogy.\""
+        ]
+    },
+    {
         "id": "cells",
         "title": "Cells",
         "date": "2026-10-19",
